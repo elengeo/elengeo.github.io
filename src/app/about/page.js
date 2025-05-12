@@ -1,14 +1,9 @@
-// src/app/experiences/page.js
-export default function ExperiencesPage() {
+// src/app/about/page.js
+export default function AboutPage() {
     return (
       <div className="text-center">
-        <h1 className="text-4xl mb-4">My Experiences</h1>
-        <ul>
-          <li>Code Instructor at theCoderSchool</li>
-          <li>Student Researcher - Infrastructure as Code Benchmark</li>
-          <li>Web Developer - Instagram Clone</li>
-          <li>i like my sootcase</li>
-        </ul>
+        <h1 className="text-4xl mb-4">About Me</h1>
+        <p className="text-xl">Welcome to my portfolio. I am a software developer with a passion for building cool things.</p>
       </div>
     );
   }

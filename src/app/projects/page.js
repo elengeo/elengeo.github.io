@@ -1,13 +1,13 @@
-// src/app/experiences/page.js
-export default function ExperiencesPage() {
+// src/app/projects/page.js
+export default function ProjectsPage() {
     return (
       <div className="text-center">
-        <h1 className="text-4xl mb-4">My Experiences</h1>
+        <h1 className="text-4xl mb-4">My Projects</h1>
         <ul>
-          <li>Code Instructor at theCoderSchool</li>
-          <li>Student Researcher - Infrastructure as Code Benchmark</li>
-          <li>Web Developer - Instagram Clone</li>
-          <li>MEEP LEADER</li>
+          <li>Instagram Clone</li>
+          <li>MapReduce Framework</li>
+          <li>TinyTransformer</li>
+          <li>Library Database</li>
         </ul>
       </div>
     );
