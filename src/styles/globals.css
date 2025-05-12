@@ -1,26 +1,149 @@
-@import "tailwindcss";
-
+/* globals.css */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+    --maroon-dark: #330000;
+    --maroon-light: #620202;
+    --maroon-medium: #490101;
+    --maroon-accent: #a52a2a;
+    --maroon-hover: #b22222;
+    --text-primary: #ffffff;
+    --text-secondary: #cccccc;
+    --background-dark: #1a0a0a;
+    --background-light: #0f0505;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+/* Base Styles */
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(to bottom, var(--background-dark), var(--background-light));
+    color: var(--text-primary);
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+}
+
+/* Avatar Glow */
+.avatar-glow {
+    position: relative;
+    margin-bottom: 2.5rem;
+}
+
+.avatar-glow::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    background: radial-gradient(circle, var(--maroon-light), var(--maroon-medium));
+    filter: blur(50px);
+    opacity: 0.5;
+    z-index: -1;
+}
+
+/* Section Headings */
+.section-heading {
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.about-text {
+    width: 80%;
+    max-width: 900px;
+    margin: 0 auto 4rem auto;
+    text-align: center;
+    font-size: 1.25rem;
+    line-height: 1.6;
+    color: var(--text-secondary);
+}
+
+/* Grid Styles */
+.experience-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2x2 grid */
+    gap: 2.5rem;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Card Styles */
+.card {
+    background: linear-gradient(to right, var(--maroon-light), var(--maroon-medium));
+    padding: 2rem;
+    border-radius: 1.5rem;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: -100%;
+    left: -100%;
+    width: 300%;
+    height: 300%;
+    background: radial-gradient(circle at center, var(--maroon-accent), transparent 70%);
+    opacity: 0;
+    transition: opacity 0.4s, transform 0.4s;
+    border-radius: 50%;
+    z-index: 0;
+}
+
+.card:hover::before {
+    opacity: 0.2;
+    transform: scale(0.5);
+}
+
+/* Card Content */
+.card h3 {
+    margin-bottom: 0.75rem;
+    font-size: 1.5rem;
+    position: relative;
+    z-index: 1;
+}
+
+.card p {
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+    position: relative;
+    z-index: 1;
+}
+
+/* Button Styles */
+.card button {
+    background-color: var(--maroon-accent);
+    color: var(--text-primary);
+    padding: 0.5rem 1.5rem;
+    border-radius: 0.75rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    position: relative;
+    z-index: 1;
+}
+
+.card button:hover {
+    background-color: var(--maroon-hover);
+}
+
+/* Pulse Effect for the Blinking Cursor */
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+
+.blinking-cursor {
+    animation: pulse 1s infinite;
 }
