@@ -1,25 +1,26 @@
 // src/components/Navbar.js
-import Link from 'next/link';
+"use client";
+
+import React from 'react';
 
 export default function Navbar() {
-  return (
-    <nav className="bg-gray-800 text-white py-4 shadow-md mb-8">
-      <div className="container mx-auto flex justify-between items-center px-4">
-        <h1 className="text-2xl font-bold">
-          <Link href="/">George Elengikal</Link>
-        </h1>
-        <ul className="flex space-x-6">
-          <li>
-            <Link href="/about">About</Link>
-          </li>
-          <li>
-            <Link href="/experiences">Experiences</Link>
-          </li>
-          <li>
-            <Link href="/projects">Projects</Link>
-          </li>
-        </ul>
-      </div>
-    </nav>
-  );
+    const handleScroll = (event, targetId) => {
+        event.preventDefault();
+        const targetElement = document.getElementById(targetId);
+        if (targetElement) {
+            targetElement.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
+
+    return (
+        <header className="navbar">
+            <div className="navbar-brand">George Elengikal</div>
+            <nav className="navbar-links">
+                <a href="#landing" onClick={(e) => handleScroll(e, 'landing')}>About</a>
+                <a href="#experiences" onClick={(e) => handleScroll(e, 'experiences')}>Experiences</a>
+                <a href="#projects" onClick={(e) => handleScroll(e, 'projects')}>Projects</a>
+                <a href="#contactme" onClick={(e) => handleScroll(e, 'contact')}>Contact Me</a>
+            </nav>
+        </header>
+    );
 }
