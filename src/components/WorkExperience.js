@@ -6,19 +6,21 @@ import { motion } from "motion/react"
 
 
 const experiences = [
-    { title: 'MapReduce Framework', description: 'Scalable data processing for distributed systems' },
-    { title: 'Instagram Clone', description: 'Dynamic client-side web app with real-time updates' },
-    { title: 'Theta Takes', description: 'Modular social media website for student community' },
-    { title: 'Cloud Benchmark Research', description: 'IaC evaluation with Terraform and AWS' },
+    { 
+        title: 'Platform Engineer Intern', 
+        description: 'Enhancing existing data pipelines (ETL/ELT) and creating new features for Scout' 
+    },
+    { 
+        title: 'IaC Student Researcher', 
+        description: 'IaC evaluation with AWS, Terraform, and Rego policy' 
+    },
+    { 
+        title: 'Coding Instructor', 
+        description: 'Mentored students on various Python projects utilizing the pygame library' 
+    },
 ];
   
 export default function WorkExperience() {
-    const experiences = [
-        { title: 'MapReduce Framework', description: 'Scalable data processing for distributed systems' },
-        { title: 'Instagram Clone', description: 'Dynamic client-side web app with real-time updates' },
-        { title: 'Theta Takes', description: 'Modular social media website for student community' },
-        { title: 'Cloud Benchmark Research', description: 'IaC evaluation with Terraform and AWS' },
-    ];
     return (
         <section id="experiences">
             <h2 className="section-heading">Work Experience</h2>
@@ -28,7 +30,6 @@ export default function WorkExperience() {
                         <div className="card">
                             <h3>{exp.title}</h3>
                             <p>{exp.description}</p>
-                            <button>Learn More</button>
                         </div>
                     </div>
                 ))}

@@ -8,27 +8,22 @@ const projects = [
     {
         title: 'Search Engine',
         description: 'A scalable, high-performance search engine with tf-idf and PageRank algorithms.',
-        image: '/project1.png',
+        image: '/Ask485.png',
         featured: true,
-    },
-    {
-        title: 'MapReduce Framework',
-        description: 'Distributed data processing framework inspired by Google’s MapReduce.',
-        image: '/project2.png',
-        featured: false,
-    },
-    {
-        title: 'Instagram Clone',
-        description: 'A full-stack social media clone with real-time chat and image uploads.',
-        image: '/project3.png',
-        featured: false,
     },
     {
         title: 'Theta Takes',
-        description: 'A community-driven media site for students to share their stories.',
-        image: '/project4.png',
+        description: 'Developed a social media website for our Theta Tau chapter on campus with Next.js and Supabase',
+        image: '/ThetaTakesLogin.png',
         featured: true,
     },
+    {
+        title: 'Instagram Clone',
+        description: 'A full-stack social media clone with real-time updates and image uploads.',
+        image: '/Insta485.png',
+        featured: false,
+    },
+
 ];
 
 export default function ProjectsSection() {

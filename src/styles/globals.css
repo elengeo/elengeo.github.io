@@ -1,4 +1,5 @@
 /* globals.css */
+@import url('https://fonts.googleapis.com/css2?family=Preahvihear&display=swap');
 :root {
     --maroon-dark: #330000;
     --maroon-light: #620202;
@@ -11,11 +12,12 @@
     --background-light: #0f0505;
 }
 
+
 /* Base Styles */
 body {
     background: linear-gradient(to bottom, var(--background-dark), var(--background-light));
     color: var(--text-primary);
-    font-family: 'Inter', sans-serif;
+    font-family: 'Preahvihear';
     margin: 0;
 }
 
@@ -67,14 +69,14 @@ body {
 
 /* About Text Styles */
 .about-text-container {
-    max-width: 600px;
+    max-width: 700px;
     margin-left: 3rem;
     color: var(--text-primary);
 }
 
 /* Section Heading Styles */
 .section-heading {
-    font-size: 4rem;
+    font-size: 3rem;
     font-weight: bold;
     text-align: center;
     margin-bottom: 1rem;
@@ -322,7 +324,7 @@ body {
 }
 
 .navbar-brand {
-    color: var(--maroon-accent);
+    color: var(--text-primary);
     font-size: 1.5rem;
     font-weight: bold;
     cursor: pointer;
