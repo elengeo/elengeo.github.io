@@ -8,7 +8,7 @@ import { motion } from "motion/react"
 const experiences = [
     { 
         title: 'Platform Engineer Intern', 
-        description: 'Enhancing existing data pipelines (ETL/ELT) and creating new features for Scout' 
+        description: 'Enhancing existing data pipelines (ETL/ELT) and creating new features for Scout Motors' 
     },
     { 
         title: 'IaC Student Researcher', 

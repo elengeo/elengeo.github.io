@@ -5,7 +5,7 @@
     --maroon-light: #620202;
     --maroon-medium: #490101;
     --maroon-accent: #a52a2a;
-    --maroon-hover: #b22222;
+    --maroon-hover: #cf2b2b;
     --text-primary: #ffffff;
     --text-secondary: #cccccc;
     --background-dark: #1a0a0a;
@@ -80,7 +80,7 @@ body {
     font-weight: bold;
     text-align: center;
     margin-bottom: 1rem;
-    color: var(--maroon-accent);
+    color: var(--maroon-hover);
 }
 
 .section-subheading {
